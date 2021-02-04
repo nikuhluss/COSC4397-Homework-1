@@ -5,7 +5,7 @@ using TMPro;
 
 public class Player : MonoBehaviour
 {
-    public TMP_Text score;
+    //public TMP_Text score;
     public float speed = 90;
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         GetComponent<Rigidbody>().AddForce(movement * speed * Time.deltaTime);
-        score.transform.position = this.transform.position;
+        //score.transform.position = this.transform.position;
 
     }
 }

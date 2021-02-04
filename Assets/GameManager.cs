@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -8,7 +9,8 @@ public class GameManager : MonoBehaviour
     public int points = 0;
     public List<Transform> spawnPoints;
     public GameObject templateObjective;
-    public TMP_Text score;
+    //public TMP_Text score;
+    public Text score;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore()
     {
-        score.text = points.ToString();
+        score.text = "Score: " + points.ToString();
     }
 }
